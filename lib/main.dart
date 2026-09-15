@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,10 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const new({super.key});
 
-  // new comment
+  
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(backgroundColor: Colors.limeAccent));
+    return MaterialApp(home: HomePage());
   }
 }
