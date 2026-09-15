@@ -13,7 +13,7 @@ class _FavouriteViewState extends State<FavouriteView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Favourite Screen')),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.cyanAccent,
       body: Center(
         child: Column(
           children: [

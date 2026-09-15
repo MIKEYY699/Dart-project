@@ -6,6 +6,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Home View')),
       backgroundColor: Colors.white70,
       body: Center(
         child: ElevatedButton(
@@ -15,7 +16,7 @@ class HomeView extends StatelessWidget {
               MaterialPageRoute(builder: (context) => FavouriteView()),
             );
           },
-          child: Text("data"),
+          child: Text("push "),
         ),
       ),
     );

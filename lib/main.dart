@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/HomePage.dart';
+import 'package:flutter_application_1/homeView.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,8 +8,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const new({super.key});
-
-  
 
   @override
   Widget build(BuildContext context) {

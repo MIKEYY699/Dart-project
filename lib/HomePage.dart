@@ -17,16 +17,24 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Flutter project')),
-      body: HomeView(),
+
+      //
+      body: screens[currentScreenIndex],
+
+      //
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentScreenIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Fav'),
           BottomNavigationBarItem(icon: Icon(Icons.share), label: 'Share'),
         ],
+        onTap: (index) {
+          setState(() {
+            currentScreenIndex = index;
+          });
+        },
       ),
     );
-    
   }
 }
