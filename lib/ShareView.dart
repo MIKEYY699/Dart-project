@@ -7,7 +7,7 @@ class Shareview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('ShareView')),
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blue,
       body: Center(
         child: ElevatedButton(
           onPressed: () {
