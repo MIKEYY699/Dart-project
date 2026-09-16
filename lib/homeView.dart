@@ -21,7 +21,6 @@ class _HomeViewState extends State<HomeView> {
           height: 20.h,
           width: 20.w,
 
-         
           child: SvgPicture.asset(
             "assets/timer.svg",
             height: 20.h,
@@ -152,7 +151,7 @@ class _HomeViewState extends State<HomeView> {
                 },
               ),
 
-              Text(nameController.text),
+              Text(nameController.text, style: TextStyle(fontFamily: "font")),
             ],
           ),
         ),
