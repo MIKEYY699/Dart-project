@@ -20,6 +20,8 @@ class _HomeViewState extends State<HomeView> {
         leading: SizedBox(
           height: 20.h,
           width: 20.w,
+
+         
           child: SvgPicture.asset(
             "assets/timer.svg",
             height: 20.h,
