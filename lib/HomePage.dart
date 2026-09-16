@@ -4,7 +4,7 @@ import 'package:flutter_application_1/ShareView.dart';
 import 'package:flutter_application_1/homeView.dart';
 
 class HomePage extends StatefulWidget {
-  const new({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -17,12 +17,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       //
       body: screens[currentScreenIndex],
 
       //
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.pink,
+        unselectedItemColor: Colors.blue,
+
+        selectedFontSize: 0,
+
+        elevation: 30,
+        backgroundColor: Colors.white,
         currentIndex: currentScreenIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),

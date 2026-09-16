@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Shareview extends StatefulWidget {
-  const new({super.key});
+class Shareview extends StatelessWidget {
+  const Shareview({super.key});
 
-  @override
-  State<Shareview> createState() => _ShareviewState();
-}
-
-class _ShareviewState extends State<Shareview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
