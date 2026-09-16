@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ShareView.dart';
 
-class FavouriteView extends StatefulWidget {
-  const new({super.key});
+class FavouriteView extends StatelessWidget {
+  const FavouriteView({super.key});
 
-  @override
-  State<FavouriteView> createState() => _FavouriteViewState();
-}
-
-class _FavouriteViewState extends State<FavouriteView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Favourite Screen')),
+      appBar: AppBar(
+        title: Text('Favourite Screen'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.white,
+      ),
       backgroundColor: Colors.cyanAccent,
       body: Center(
         child: Column(
