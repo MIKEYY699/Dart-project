@@ -12,7 +12,7 @@ class _ShareviewState extends State<Shareview> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('ShareView')),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.red,
       body: Center(
         child: ElevatedButton(
           onPressed: () {
