@@ -1,22 +1,74 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/FavouriteView.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  TextEditingController nameController = TextEditingController();
+
   @override
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home View')),
       backgroundColor: Colors.white70,
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => FavouriteView()),
-            );
-          },
-          child: Text("push "),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FavouriteView()),
+                  );
+                },
+                child: Text("push "),
+              ),
+            ),
+            SizedBox(height: 100.h),
+            TextField(
+              keyboardType: TextInputType.phone,
+
+              controller: nameController,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: const Color.fromARGB(255, 188, 247, 247),
+                // focusColor: const Color.fromARGB(255, 11, 4, 3),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.r),
+
+                  borderSide: BorderSide(color: Colors.red, width: 2.w),
+                ),
+
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.r),
+                  borderSide: BorderSide(color: Colors.yellow, width: 2),
+                ),
+
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.r),
+                  borderSide: BorderSide(
+                    color: const Color.fromARGB(255, 235, 10, 10),
+                    width: 2,
+                  ),
+                ),
+
+                hintText: 'Enter your name',
+              ),
+              onChanged: (text) {
+                setState(() {});
+              },
+            ),
+
+            Text(nameController.text),
+          ],
         ),
       ),
     );
